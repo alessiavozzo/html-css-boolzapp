@@ -1,0 +1,84 @@
+/* #region reset */
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* #endregion reset */
+
+/* #region color palette */
+
+:root{
+    --bool-lighter: rgba(255, 255, 255, 1);
+    --bool-darker: black;
+    --bool-bg-dark: rgba(0, 150, 136, 1);
+    --bool-bg-light: rgba(220, 219, 210, 1);
+    --bool-primary: rgba(213, 249, 186, 1);
+    --bool-text: rgba(177, 177, 177, 1);
+    --bool-nav: rgba(234, 234, 234, 1);
+}
+
+
+/* #endregion color palette */
+
+/* #region debug */
+
+body *{
+    border: 1px solid black;
+}
+
+
+
+/* #endregion debug */
+
+
+/* #region common rules */
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* #endregion common rules */
+
+
+
+/* #region utility */
+
+.d-flex{
+    display: flex;
+}
+
+.col-12{
+    width: 100%;
+}
+
+.col-8{
+    width: calc((100% / 12) * 8);
+}
+
+.col-4{
+    width: calc((100% / 12) * 4);
+}
+
+
+/* #endregion utility */
+
+
+
+
+
+/* #region media queries */
+
+@media screen and (max-width: 991px) {
+    
+}
+
+
+
+
+@media screen and (max-width: 540px) {
+    
+}

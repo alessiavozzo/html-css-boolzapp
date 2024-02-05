@@ -42,9 +42,9 @@
     border: 1px solid black;
 } */
 
-.debug #main-app *{
+/* .debug #main-app *{
     border: 1px solid black;
-}
+} */
 
 /* .debug #sidebar {
     gap: 2rem;
@@ -70,7 +70,6 @@ body{
 
 .row{
     display: flex;
-    flex-wrap: wrap;
     width: 100%;
 }
 
@@ -155,8 +154,13 @@ body{
     justify-content: space-between;
     align-items: center;
     background-color: var(--bool-nav);
-    height: 10%;
-    min-height: 10%;
+    height: 100px;
+    min-height: 100px;
+
+    & .user{
+        width: 60px;
+        height: 60px;
+    }
 
     & img{
         width: 100%;
@@ -166,10 +170,11 @@ body{
     }
 
     & .action{
-        gap: 1.3rem;
+        gap: 1.4rem;
+        padding-right: 1rem;
 
         & > i{
-            font-size: 2rem;
+            font-size: 1.8rem;
             color: var(--bool-text);
         }
     }
@@ -287,7 +292,8 @@ body{
 
 #main-app{
     height: 100%;
-    overflow: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .top-bar{    
@@ -299,7 +305,8 @@ body{
     z-index: 10;
     align-items: center;
     padding: 0.8rem;
-    height: 10%;
+    height: 100px;
+    min-height: 100px;
 
     & .text{
         flex-direction: column;
@@ -334,28 +341,25 @@ body{
 }
 
 .top-action{
-    gap: 0.8rem;
-    font-size: 2rem;
+    gap: 1.4rem;
+    font-size: 1.8rem;
     color: var(--bool-text);
+    padding-right: 1rem;
 }
-
-
 
 
 .chat{
     height: 100%;
     background-image: url(../img/mine.jpg);
-}
+    overflow-y: auto;
+    padding: 2rem 4rem;
 
-.bottom-bar{
-    justify-content: space-around;
-    position: sticky;
-    bottom: 0;
-    z-index: 10;
-    width: 100%;
-    background-color: var(--bool-nav);
-}
+    & .my-msg, .contact-msg{
+        border-radius: 1.5rem;
+        padding: 1.2rem;
+    }
 
+}
 
 .msg{
     gap: 2rem;
@@ -363,13 +367,48 @@ body{
 
     & .my-msg{
         align-self: flex-end;
+        background-color: var(--bool-primary);
     }
 
     & .contact-msg{
         align-self: flex-start;
+        background-color: var(--bool-lighter);
     }
 
 }
+
+
+
+
+.bottom-bar{
+    background-color: var(--bool-nav);
+    justify-content: space-around;
+    z-index: 10;
+    width: 100%;
+    background-color: var(--bool-nav);
+    padding: 0.8rem;
+    align-items: center;
+    height: 8%;
+
+    & > i{
+        font-size: 1.8rem;
+        color: grey;
+        text-align: center;
+    }
+
+    & input{
+        padding: 0.8rem;
+        border: none;
+        border-radius: 0.5rem;
+
+        &:focus{
+            outline: none;
+        }
+    }
+}
+
+
+
 
 
 /* #region media queries */
@@ -402,6 +441,14 @@ body{
 
     .hide{
         display: none;
+    }
+
+    #sidebar{
+        width: 100px;
+    }
+
+    #main-app{
+        width: 100%;
     }
 
     

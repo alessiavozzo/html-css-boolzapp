@@ -29,6 +29,10 @@ body *{
     border: 1px solid black;
 }
 
+.debug #app{
+    height: 100%;
+}
+
 
 
 /* #endregion debug */
@@ -38,6 +42,22 @@ body *{
 
 body{
     font-family: 'Lato', sans-serif;
+    background-image: linear-gradient(var(--bool-bg-dark) 14%, 14%, var(--bool-bg-light));
+    height: 100vh;
+}
+
+.app-container{
+    width: 100%;
+    height: 95vh;
+    margin: 1.5rem auto;
+    max-width: 1920px;
+}
+
+#app{
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    flex-wrap: wrap;
 }
 
 
@@ -55,12 +75,20 @@ body{
     width: 100%;
 }
 
+.col-11{
+    width: calc((100% / 12) * 11);
+}
+
 .col-8{
     width: calc((100% / 12) * 8);
 }
 
 .col-4{
     width: calc((100% / 12) * 4);
+}
+
+.col-1{
+    width: calc(100% / 12);
 }
 
 
@@ -73,6 +101,26 @@ body{
 /* #region media queries */
 
 @media screen and (max-width: 991px) {
+
+    .app-container{
+        height: 100vh;
+        margin: 0;        
+    }
+    
+    #app{
+        width: 100%;
+        height: 100%;
+        margin: 0;
+    }
+    
+    .col-md-1{
+        width: calc(100% / 12);
+    }
+
+    .col-md-11{
+        width: calc((100% / 12) * 11);
+    }
+
     
 }
 
@@ -81,4 +129,11 @@ body{
 
 @media screen and (max-width: 540px) {
     
+    .col-sm-12{
+        width: 100%;
+    }
+
+    #sidebar{
+        display: none;
+    }
 }

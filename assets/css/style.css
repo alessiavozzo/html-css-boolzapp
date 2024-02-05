@@ -601,6 +601,14 @@ body{
     .bottom-bar > i{
         display: none;
     }
+
+    .bottom-bar{
+        padding: 0.8rem 1.5rem;
+    }
+
+    .top-action{
+        display: none;
+    }
 }
 
 /* #endregion media queries */

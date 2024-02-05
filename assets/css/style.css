@@ -531,6 +531,17 @@ body{
 /* #endregion main-app */
 
 
+/* #region scrollbar */
+
+::-webkit-scrollbar {
+    width: 1px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--bool-text);
+}
+
+/* #endregion scrollbar */
+
 
 /* #region media queries */
 

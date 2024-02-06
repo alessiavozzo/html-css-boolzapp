@@ -59,7 +59,7 @@
 
 body{
     font-family: 'Lato', sans-serif;
-    background-image: linear-gradient(var(--bool-bg-dark) 14%, 14%, var(--bool-bg-light));
+    background-image: linear-gradient(var(--bool-bg-dark) 150px, 150px, var(--bool-bg-light));
     height: 100vh;
     overflow: hidden;
     font-size: 1.1rem;
@@ -82,6 +82,7 @@ body{
     width: 90%;
     margin: auto;
     height: 100%;
+    max-width: 1200px;
 }
 
 
